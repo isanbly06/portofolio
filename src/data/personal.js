@@ -34,7 +34,7 @@ export const personalInfo = {
   email: "ikhsansalsabily06@gmail.com",
   location: "Lhokseumawe, Aceh, Indonesia",
   socials: {
-    github: "https://github.com/ikhsan06",
+    github: "https://github.com/isanbly06",
     instagram: "https://instagram.com/isanbly_",
     tiktok: "https://tiktok.com/@sune",
     linkedin: "https://linkedin.com/in/ikhsansalsabilly"
