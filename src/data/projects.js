@@ -1,0 +1,155 @@
+/**
+ * @typedef {Object} ProjectItem Skema objek data detail proyek / case study.
+ * @property {string} id ID unik proyek.
+ * @property {string} slug Parameter URL slug ramah SEO (contoh: 'sun-futsal').
+ * @property {string} title Judul utama proyek.
+ * @property {string} category Kategori utama proyek untuk filter (contoh: 'Web', 'AI', 'Database').
+ * @property {string[]} [secondaryCategories] Kategori sekunder tambahan.
+ * @property {boolean} [featured] Menandai apakah proyek masuk dalam kategori unggulan/featured.
+ * @property {string} thumbnail Path gambar/SVG pratinjau thumbnail.
+ * @property {string} shortDescription Deskripsi singkat untuk kartu galeri.
+ * @property {string} overview Gambaran umum proyek untuk halaman case study detail.
+ * @property {string} problem Penjelasan masalah/kebutuhan yang melatarbelakangi proyek.
+ * @property {string} solution Solusi teknis yang diterapkan dalam bentuk perangkat lunak.
+ * @property {string[]} features List fitur utama sistem aplikasi.
+ * @property {string[]} techStack Daftar teknologi/bahasa/framework yang digunakan.
+ * @property {string} role Peran tanggung jawab pengembang dalam proyek.
+ * @property {string} challenges Tantangan teknis yang dihadapi selama pengembangan.
+ * @property {string} technicalSolution Pendekatan arsitektur/kode untuk mengatasi tantangan.
+ * @property {string} result Hasil akhir dan dampak sistem bagi pengguna.
+ * @property {string} [githubUrl] URL repository kode di GitHub (opsional).
+ * @property {string} [demoUrl] URL live demo aplikasi yang aktif (opsional).
+ */
+
+/** @type {string[]} List daftar kategori proyek untuk tab filter */
+export const projectCategories = [
+  "Semua",
+  "Web",
+  "AI",
+  "Database",
+  "Akademik",
+  "Personal"
+];
+
+/** @type {ProjectItem[]} Katalog proyek portofolio dan case study teknis */
+export const projectsData = [
+
+  {
+    id: "sun-futsal",
+    slug: "sun-futsal",
+    title: "Sun Futsal Reservation System",
+    category: "Web",
+    secondaryCategories: ["Database", "Akademik"],
+    featured: true,
+    thumbnail: "/images/projects/sun-futsal.svg",
+    shortDescription: "Sistem reservasi lapangan futsal berbasis web yang merapikan jadwal booking dan laporan transaksi secara realtime.",
+    overview: "Sun Futsal Reservation System merupakan solusi platform aplikasi web yang dirancang khusus untuk memodernisasi proses penyewaan lapangan futsal. Aplikasi ini membantu pemilik tempat futsal mengelola jadwal pemesanan secara transparan dan mencegah terjadinya double-booking.",
+    problem: "Pemesanan lapangan futsal yang dilakukan secara manual melalui pesan instan sering menyebabkan bentrok jadwal antar penyewa, kesulitan pencatatan uang muka (DP), dan kerumitan rekapitulasi pendapatan bulanan.",
+    solution: "Mengembangkan platform web terintegrasi berbasis Laravel dan MySQL. Pelanggan dapat melihat ketersediaan jam secara langsung, melakukan reservasi mandiri, dan mengunggah bukti pembayaran, sementara pengelola mendapatkan dashboard admin untuk verifikasi cepat.",
+    features: [
+      "Jadwal Ketersediaan Realtime: Grid interaktif slot jam per lapangan yang diperbarui secara otomatis.",
+      "Sistem Antrean Reservasi: Mencegah dua pengguna memesan slot jam yang sama secara bersamaan.",
+      "Dashboard Manajemen Admin: Pengelolaan status booking (Pending, Diterima, Ditolak) dan cetak rekapitulasi.",
+      "Kalkulasi Biaya Otomatis: Perhitungan total harga sesuai durasi dan tarif jam reguler/malam.",
+      "Notifikasi Status Booking: Konfirmasi visual dan ringkasan riwayat pemesanan untuk pelanggan."
+    ],
+    techStack: ["Laravel", "PHP 8.2", "MySQL", "Tailwind CSS", "JavaScript ES6", "Blade Engine"],
+    role: "Full Stack Web Developer (Proyek Akademik & Pengembang Utama)",
+    challenges: "Mengatasi masalah kondisi konkurensi (race condition) ketika dua calon penyewa mencoba memesan slot lapangan di jam yang persis sama dalam hitungan detik.",
+    technicalSolution: "Mengimplementasikan database locking (SELECT FOR UPDATE) dalam Laravel Database Transaction untuk memastikan slot jam yang sedang diproses dikunci sementara hingga transaksi selesai.",
+    result: "Sistem berhasil menghilangkan risiko jadwal bentrok 100%, mempercepat proses verifikasi booking oleh admin hingga 70%, dan mempermudah rekap keuangan bulanan.",
+    gallery: [
+      { title: "Dashboard Antarmuka Reservasi", type: "system", subtitle: "Tampilan visual pilihan jadwal & slot jam" },
+      { title: "Manajemen Booking Admin", type: "admin", subtitle: "Tabel verifikasi pembayaran dan laporan" }
+    ],
+    githubUrl: "https://github.com/ikhsansalsabilly/sun-futsal-reservation",
+    demoUrl: ""
+  },
+  {
+    id: "db-inventory-system",
+    slug: "db-inventory-system",
+    title: "Sistem Informasi Manajemen Basis Data Stok",
+    category: "Database",
+    secondaryCategories: ["Web", "Akademik"],
+    featured: true,
+    thumbnail: "/images/projects/inventory.svg",
+    shortDescription: "Perancangan dan optimasi skema database relasional MySQL untuk pelacakan inventaris barang berbasis web.",
+    overview: "Proyek perancangan basis data terstruktur untuk pencatatan barang masuk, barang keluar, dan stok minimum dalam suatu gudang distribusi.",
+    problem: "Pencatatan inventaris barang yang tidak terstruktur menyebabkan ketidaksesuaian jumlah fisik dengan catatan sistem dan lambatnya pembuatan laporan.",
+    solution: "Merancang skema database terintegrasi dengan normalisasi 3NF, stored procedures, dan database triggers untuk pembaruan stok otomatis.",
+    features: [
+      "Normalisasi Skema 3NF untuk efisiensi penyimpanan dan penghilangan redundansi data.",
+      "Trigger Pembaruan Stok Otomatis saat terjadi pencatatan barang masuk atau keluar.",
+      "Stored Procedure untuk ekspor rekap harian barang.",
+      "Index query teroptimasi untuk pencarian cepat berdasarkan kode baris barang."
+    ],
+    techStack: ["MySQL", "PHP", "Adminer", "Relational Database Design"],
+    role: "Database Designer & Backend Developer",
+    challenges: "Menjaga integritas data referensial (foreign keys) saat terjadi penghapusan atau pembaruan master data kategori barang.",
+    technicalSolution: "Menggunakan constraints CASCADE dan RESTRICT yang tepat pada relasi tabel serta audit log historis.",
+    result: "Waktu eksekusi query rekap stok berkurang hingga 80% dan data barang tercatat secara konsisten.",
+    gallery: [
+      { title: "Entity Relationship Diagram (ERD)", type: "erd", subtitle: "Struktur relasi tabel ter-normalisasi" }
+    ],
+    githubUrl: "https://github.com/ikhsansalsabilly/inventory-db-system",
+    demoUrl: ""
+  },
+  {
+    id: "ai-crop-disease-analyzer",
+    slug: "ai-crop-disease-analyzer",
+    title: "Eksplorasi AI Analisis Penyakit Tanaman",
+    category: "AI",
+    secondaryCategories: ["Personal", "Web"],
+    featured: true,
+    thumbnail: "/images/projects/ai-crop.svg",
+    shortDescription: "Proyek eksplorasi model Python Machine Learning untuk klasifikasi citra daun dan identifikasi penyakit tanaman.",
+    overview: "Eksperimen kecerdasan buatan (AI) berbasis Python yang memanfaatkan model Convolutional Neural Network (CNN) sederhana untuk mengenali pola penyakit pada daun tanaman pertanian.",
+    problem: "Petani sering kali terlambat mendeteksi gejela awal penyakit pada tanaman sehingga mengakibatkan penurunan hasil panen.",
+    solution: "Membangun skrip analisis citra digital dengan Python yang memproses input gambar daun dan memberikan prediksi diagnosis penyakit beserta rekomendasi penanganan awal.",
+    features: [
+      "Preprocessing Citra Digital (resizing, normalization, data augmentation).",
+      "Model klasifikasi CNN sederhana berbasis TensorFlow/Keras.",
+      "Antarmuka CLI dan demonstrasi web prototype sederhana.",
+      "Output prediksi disertai skor tingkat kepercayaan (confidence score)."
+    ],
+    techStack: ["Python", "TensorFlow", "OpenCV", "NumPy", "Flask"],
+    role: "AI Explorer & Developer",
+    challenges: "Dataset citra daun yang terbatas dan memiliki variasi pencahayaan yang sangat berbeda.",
+    technicalSolution: "Menerapkan teknik Data Augmentation (rotation, zoom, horizontal flip) untuk memperkaya variasi sampel latih.",
+    result: "Model mencapai akurasi pengujian di atas 85% pada dataset skala eksperimental.",
+    gallery: [
+      { title: "Visualisasi Data Class & Prediction", type: "ai", subtitle: "Grafik akurasi dan antarmuka hasil deteksi" }
+    ],
+    githubUrl: "https://github.com/ikhsansalsabilly/crop-disease-ai-exploration",
+    demoUrl: ""
+  },
+  {
+    id: "personal-portfolio-v1",
+    slug: "personal-portfolio-v1",
+    title: "Interactive Personal Portfolio Website",
+    category: "Personal",
+    secondaryCategories: ["Web"],
+    featured: false,
+    thumbnail: "/images/projects/portfolio.svg",
+    shortDescription: "Website portofolio pribadi modern berbasis React, Vite, dan Tailwind CSS dengan tema visual natural dan bersih.",
+    overview: "Website ini dirancang sebagai wadah profesional untuk menampilkan karya proyek, keahlian teknis, riwayat pengalaman, dan prestasi akademik Ikhsan Salsabilly.",
+    problem: "Membutuhkan media personal branding yang cepat, accessible, responsif, dan mudah diperbarui tanpa dependensi backend yang rumit.",
+    solution: "Membangun SPA React dengan struktur data terpisah (JS data modules), sistem filter interaktif, serta rute case study proyek berbasis URL slug.",
+    features: [
+      "Filter Proyek Tanpa Reload (Web, AI, Database, Akademik, Personal).",
+      "Struktur Case Study Teknis Komprehensif per Proyek.",
+      "Modal Preview Sertifikat Prestasi Interaktif.",
+      "Desain Responsif 100% dari Layar Ponsel hingga Desktop."
+    ],
+    techStack: ["React 18", "Vite", "Tailwind CSS", "Framer Motion", "Lucide React"],
+    role: "Frontend Developer & UI/UX Designer",
+    challenges: "Memastikan skema warna konsisten di seluruh komponen sesuai guideline tanpa terlihat seperti template bawaan.",
+    technicalSolution: "Mengkonfigurasi custom theme tokens di Tailwind config dan variabel CSS terpusat.",
+    result: "Website memuat sangat cepat (skor Lighthouse tinggi) dan ramah perangkat mobile.",
+    gallery: [
+      { title: "Tampilan Utama & Portfolio Showcase", type: "web", subtitle: "Interface clean & natural palette" }
+    ],
+    githubUrl: "https://github.com/ikhsansalsabilly/portfolio",
+    demoUrl: "https://ikhsansalsabilly.dev"
+  }
+];

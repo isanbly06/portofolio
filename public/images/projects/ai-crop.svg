@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" fill="#164A41"/>
+  <!-- Leaf and Neural Net graphics -->
+  <path d="M 300 80 C 180 140, 160 320, 300 340 C 440 320, 420 140, 300 80 Z" fill="#9DC88D" opacity="0.8"/>
+  <path d="M 300 80 L 300 340" stroke="#164A41" stroke-width="4"/>
+  <path d="M 300 160 L 230 200 M 300 220 L 370 260 M 300 130 L 350 170" stroke="#164A41" stroke-width="3"/>
+  
+  <!-- Bounding Box AI Detection -->
+  <rect x="200" y="140" width="200" height="150" fill="none" stroke="#F1B24A" stroke-width="3" stroke-dasharray="8,4"/>
+  <rect x="200" y="115" width="160" height="25" fill="#F1B24A" rx="4"/>
+  <text x="210" y="132" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="#164A41">CNN Detection: 94.8%</text>
+</svg>
