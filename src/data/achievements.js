@@ -12,6 +12,9 @@
  * @property {string} certificateSvg Path lokasi gambar/SVG dokumen sertifikat.
  */
 
+import cert2 from "../assets/achievements/sertifikat-2.pdf";
+import cert3 from "../assets/achievements/sertifikat-3.pdf";
+
 /** @type {AchievementItem[]} Daftar prestasi dan penghargaan kompetisi pengguna */
 export const achievementsData = [
 
@@ -29,7 +32,7 @@ export const achievementsData = [
       "Presentasi karya ilmiah dan pengujian produk di depan dewan juri ahli.",
       "Publikasi hasil temuan penelitian."
     ],
-    certificateSvg: "/images/achievements/cys-2022-cert.svg"
+    certificateSvg: cert2
   },
   {
     id: "cys-2023",
@@ -44,6 +47,6 @@ export const achievementsData = [
       "Pengembangan variasi hipotesis dan eksplorasi data lanjutan.",
       "Defend riset di sesi tanya jawab juri provinsi."
     ],
-    certificateSvg: "/images/achievements/cys-2023-cert.svg"
+    certificateSvg: cert3
   }
 ];

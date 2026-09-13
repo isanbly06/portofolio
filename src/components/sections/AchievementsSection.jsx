@@ -104,12 +104,20 @@ export const AchievementsSection = () => {
         >
           {selectedCertificate && (
             <div className="space-y-6">
-              <div className="bg-soft-light p-2 rounded-2xl border border-soft/50 overflow-hidden shadow-soft-sm">
-                <img
-                  src={selectedCertificate.certificateSvg}
-                  alt={`Sertifikat ${selectedCertificate.title}`}
-                  className="w-full h-auto rounded-xl object-contain max-h-[60vh]"
-                />
+              <div className={`bg-soft-light p-2 rounded-2xl border border-soft/50 overflow-hidden shadow-soft-sm ${selectedCertificate.certificateSvg.toLowerCase().endsWith('.pdf') ? 'h-[60vh]' : ''}`}>
+                {selectedCertificate.certificateSvg.toLowerCase().endsWith('.pdf') ? (
+                  <iframe
+                    src={selectedCertificate.certificateSvg}
+                    title={`Sertifikat ${selectedCertificate.title}`}
+                    className="w-full h-full rounded-xl"
+                  />
+                ) : (
+                  <img
+                    src={selectedCertificate.certificateSvg}
+                    alt={`Sertifikat ${selectedCertificate.title}`}
+                    className="w-full h-auto rounded-xl object-contain max-h-[60vh]"
+                  />
+                )}
               </div>
 
               <div className="bg-gray-50 p-4 rounded-xl space-y-2">

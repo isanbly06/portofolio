@@ -29,11 +29,6 @@ export const ContactSection = () => {
 
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             
-            <Badge variant="accent" className="mb-4 text-xs font-bold px-3 py-1 text-white">
-              <Mail className="w-3.5 h-3.5 mr-1" />
-              <span>Mari Terhubung</span>
-            </Badge>
-
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
               Tertarik Berkolaborasi atau <br className="hidden sm:inline" />
               Diskusi Proyek Web?

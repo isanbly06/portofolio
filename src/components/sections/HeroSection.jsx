@@ -4,6 +4,7 @@ import { ArrowRight, Download, Github, Instagram, Mail, Video, Sparkles } from '
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { personalInfo } from '../../data/personal';
+import profileImg from '../../assets/foto_profil.jpeg';
 
 /**
  * Komponen Section Sampul Utama (`HeroSection`)
@@ -151,7 +152,7 @@ export const HeroSection = () => {
               {/* Image card container */}
               <div className="relative w-full h-full rounded-3xl bg-white p-3 shadow-soft-lg border border-soft/40 overflow-hidden flex items-center justify-center">
                 <img
-                  src="/images/foto_profil.jpeg"
+                  src={profileImg}
                   alt={`Foto Profil ${personalInfo.name}`}
                   className="w-full h-full object-cover rounded-2xl"
                   loading="eager"
