@@ -62,18 +62,16 @@ export const projectsData = [
       { title: "Dashboard Antarmuka Reservasi", type: "system", subtitle: "Tampilan visual pilihan jadwal & slot jam" },
       { title: "Manajemen Booking Admin", type: "admin", subtitle: "Tabel verifikasi pembayaran dan laporan" }
     ],
-    githubUrl: "https://github.com/ikhsansalsabilly/sun-futsal-reservation",
-    demoUrl: ""
   },
   {
-    id: "db-inventory-system",
-    slug: "db-inventory-system",
-    title: "Sistem Informasi Manajemen Basis Data Stok",
-    category: "Database",
-    secondaryCategories: ["Web", "Akademik"],
+    id: "lost and found",
+    slug: "lost and found",
+    title: "Sistem Informasi Lost and FOund",
+    category: "Web",
+    secondaryCategories: ["Database", "Akademik"],
     featured: true,
-    thumbnail: "/images/projects/inventory.svg",
-    shortDescription: "Perancangan dan optimasi skema database relasional MySQL untuk pelacakan inventaris barang berbasis web.",
+    thumbnail: "/images/projects/lost_and_found.png",
+    shortDescription: "Sebuah web yang mempermudah mahasiswa/dosen untuk menemukan barang hilang.",
     overview: "Proyek perancangan basis data terstruktur untuk pencatatan barang masuk, barang keluar, dan stok minimum dalam suatu gudang distribusi.",
     problem: "Pencatatan inventaris barang yang tidak terstruktur menyebabkan ketidaksesuaian jumlah fisik dengan catatan sistem dan lambatnya pembuatan laporan.",
     solution: "Merancang skema database terintegrasi dengan normalisasi 3NF, stored procedures, dan database triggers untuk pembaruan stok otomatis.",
@@ -83,16 +81,14 @@ export const projectsData = [
       "Stored Procedure untuk ekspor rekap harian barang.",
       "Index query teroptimasi untuk pencarian cepat berdasarkan kode baris barang."
     ],
-    techStack: ["MySQL", "PHP", "Adminer", "Relational Database Design"],
-    role: "Database Designer & Backend Developer",
+    techStack: ["MySQL", "PHP", "React"],
+    role: "Bisnis Logic & Frontend Developer",
     challenges: "Menjaga integritas data referensial (foreign keys) saat terjadi penghapusan atau pembaruan master data kategori barang.",
     technicalSolution: "Menggunakan constraints CASCADE dan RESTRICT yang tepat pada relasi tabel serta audit log historis.",
     result: "Waktu eksekusi query rekap stok berkurang hingga 80% dan data barang tercatat secara konsisten.",
     gallery: [
       { title: "Entity Relationship Diagram (ERD)", type: "erd", subtitle: "Struktur relasi tabel ter-normalisasi" }
     ],
-    githubUrl: "https://github.com/ikhsansalsabilly/inventory-db-system",
-    demoUrl: ""
   },
   {
     id: "ai-crop-disease-analyzer",
