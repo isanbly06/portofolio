@@ -41,7 +41,7 @@ export const projectsData = [
     category: "Web",
     secondaryCategories: ["Database", "Akademik"],
     featured: true,
-    thumbnail: "/images/projects/sun-futsal.svg",
+    thumbnail: "/images/projects/sun_futsal.png",
     shortDescription: "Sistem reservasi lapangan futsal berbasis web yang merapikan jadwal booking dan laporan transaksi secara realtime.",
     overview: "Sun Futsal Reservation System merupakan solusi platform aplikasi web yang dirancang khusus untuk memodernisasi proses penyewaan lapangan futsal. Aplikasi ini membantu pemilik tempat futsal mengelola jadwal pemesanan secara transparan dan mencegah terjadinya double-booking.",
     problem: "Pemesanan lapangan futsal yang dilakukan secara manual melalui pesan instan sering menyebabkan bentrok jadwal antar penyewa, kesulitan pencatatan uang muka (DP), dan kerumitan rekapitulasi pendapatan bulanan.",
