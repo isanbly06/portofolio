@@ -39,7 +39,7 @@ export const projectsData = [
     slug: "sun-futsal",
     title: "Sun Futsal Reservation System",
     category: "Web",
-    secondaryCategories: ["Database", "Akademik"],
+    secondaryCategories: ["Database", "Akademik","Personal"],
     featured: true,
     thumbnail: "/images/projects/sun_futsal.png",
     shortDescription: "Sistem reservasi lapangan futsal berbasis web yang merapikan jadwal booking dan laporan transaksi secara realtime.",
@@ -73,22 +73,15 @@ export const projectsData = [
     thumbnail: "/images/projects/lost_and_found.png",
     shortDescription: "Sebuah web yang mempermudah mahasiswa/dosen untuk menemukan barang hilang.",
     overview: "Proyek perancangan basis data terstruktur untuk pencatatan barang masuk, barang keluar, dan stok minimum dalam suatu gudang distribusi.",
-    problem: "Pencatatan inventaris barang yang tidak terstruktur menyebabkan ketidaksesuaian jumlah fisik dengan catatan sistem dan lambatnya pembuatan laporan.",
-    solution: "Merancang skema database terintegrasi dengan normalisasi 3NF, stored procedures, dan database triggers untuk pembaruan stok otomatis.",
+    problem: "Banyak mahasiswa/dosen yang kehilangan atau menemukan barang disekitar kampus tapi bingung harus melapor kemana selain melapor ke pos satpam. ",
+    solution: "Web ini mempermudah agar mahasiswa/dosen dapat mencari barang hilang dan juga melaporkan barang temuan disekitar kampus.",
     features: [
-      "Normalisasi Skema 3NF untuk efisiensi penyimpanan dan penghilangan redundansi data.",
-      "Trigger Pembaruan Stok Otomatis saat terjadi pencatatan barang masuk atau keluar.",
-      "Stored Procedure untuk ekspor rekap harian barang.",
-      "Index query teroptimasi untuk pencarian cepat berdasarkan kode baris barang."
+      "Melaporkan dan mencari barang pada website",
+      "Pengguna dapat saling berkomunikasi didalam website ini.",
+      "QRcode untuk mengkomfirmasi barang yang sudah diterima"
     ],
     techStack: ["MySQL", "PHP", "React"],
     role: "Bisnis Logic & Frontend Developer",
-    challenges: "Menjaga integritas data referensial (foreign keys) saat terjadi penghapusan atau pembaruan master data kategori barang.",
-    technicalSolution: "Menggunakan constraints CASCADE dan RESTRICT yang tepat pada relasi tabel serta audit log historis.",
-    result: "Waktu eksekusi query rekap stok berkurang hingga 80% dan data barang tercatat secara konsisten.",
-    gallery: [
-      { title: "Entity Relationship Diagram (ERD)", type: "erd", subtitle: "Struktur relasi tabel ter-normalisasi" }
-    ],
   },
   {
     id: "ai-crop-disease-analyzer",
