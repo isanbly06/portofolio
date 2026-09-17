@@ -106,11 +106,23 @@ export const AchievementsSection = () => {
             <div className="space-y-6">
               <div className={`bg-soft-light p-2 rounded-2xl border border-soft/50 overflow-hidden shadow-soft-sm ${selectedCertificate.certificateSvg.toLowerCase().endsWith('.pdf') ? 'h-[60vh]' : ''}`}>
                 {selectedCertificate.certificateSvg.toLowerCase().endsWith('.pdf') ? (
-                  <iframe
-                    src={selectedCertificate.certificateSvg}
-                    title={`Sertifikat ${selectedCertificate.title}`}
+                  <object
+                    data={selectedCertificate.certificateSvg}
+                    type="application/pdf"
                     className="w-full h-full rounded-xl"
-                  />
+                  >
+                    <div className="flex flex-col items-center justify-center h-full p-6 text-center">
+                      <p className="text-sm text-gray-600 mb-3">Browser Anda tidak dapat menampilkan pratinjau PDF.</p>
+                      <a 
+                        href={selectedCertificate.certificateSvg} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
+                      >
+                        Buka / Unduh Dokumen
+                      </a>
+                    </div>
+                  </object>
                 ) : (
                   <img
                     src={selectedCertificate.certificateSvg}
