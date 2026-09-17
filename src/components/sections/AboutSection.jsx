@@ -60,7 +60,7 @@ export const AboutSection = () => {
                   Saya adalah <strong className="text-primary font-semibold">Ikhsan Salsabilly</strong>, mahasiswa D4 Teknik Informatika Politeknik Negeri Lhokseumawe angkatan 2024. Ketertarikan saya pada dunia teknologi berawal dari rasa penasaran tentang bagaimana sebuah sistem informasi mampu menyelesaikan masalah operasional di dunia nyata.
                 </p>
                 <p>
-                  Selama masa studi, saya memfokuskan diri pada penguasaan <strong className="text-primary font-semibold">Web Development</strong> (baik frontend modern maupun arsitektur backend) serta penguatan dasar <strong className="text-primary font-semibold">Manajemen Basis Data</strong> dan infrastruktur server Virtual Machine.
+                  Selama masa studi, saya memfokuskan diri pada penguasaan <strong className="text-primary font-semibold">Web Development</strong> (baik frontend modern maupun arsitektur backend) serta penguatan dasar <strong className="text-primary font-semibold">Manajemen Basis Data.</strong>
                 </p>
                 <p>
                   Prinsip kerja saya adalah belajar secara konsisten, jujur dalam menyampaikan tingkat kapabilitas teknis, dan berorientasi pada hasil akhir yang ramah pengguna serta mudah dirawat (clean & maintainable code).
