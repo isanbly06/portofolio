@@ -47,7 +47,7 @@ export const ContactSection = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-white/90 mb-2">
-                    Pesan (Wajib)
+                    Pesan
                   </label>
                   <textarea
                     name="message"
@@ -61,7 +61,7 @@ export const ContactSection = () => {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-white/90 mb-2">
-                    Email Anda (Opsional - Jika ingin dibalas)
+                    Email Anda
                   </label>
                   <input
                     type="email"

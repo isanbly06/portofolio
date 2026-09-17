@@ -37,11 +37,6 @@ export const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7 flex flex-col items-start text-left"
           >
-            {/* Badge Greeting */}
-            <Badge variant="accent" className="mb-4 text-xs font-semibold px-3 py-1 shadow-soft-sm">
-              <Sparkles className="w-3.5 h-3.5 mr-1 text-primary" />
-              <span>Selamat Datang di Portfolio Saya</span>
-            </Badge>
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-[1.15] mb-4">

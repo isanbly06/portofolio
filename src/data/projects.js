@@ -84,42 +84,13 @@ export const projectsData = [
     role: "Bisnis Logic & Frontend Developer",
   },
   {
-    id: "ai-crop-disease-analyzer",
-    slug: "ai-crop-disease-analyzer",
-    title: "Eksplorasi AI Analisis Penyakit Tanaman",
-    category: "AI",
-    secondaryCategories: ["Personal", "Web"],
-    featured: true,
-    thumbnail: "/images/projects/ai-crop.svg",
-    shortDescription: "Proyek eksplorasi model Python Machine Learning untuk klasifikasi citra daun dan identifikasi penyakit tanaman.",
-    overview: "Eksperimen kecerdasan buatan (AI) berbasis Python yang memanfaatkan model Convolutional Neural Network (CNN) sederhana untuk mengenali pola penyakit pada daun tanaman pertanian.",
-    problem: "Petani sering kali terlambat mendeteksi gejela awal penyakit pada tanaman sehingga mengakibatkan penurunan hasil panen.",
-    solution: "Membangun skrip analisis citra digital dengan Python yang memproses input gambar daun dan memberikan prediksi diagnosis penyakit beserta rekomendasi penanganan awal.",
-    features: [
-      "Preprocessing Citra Digital (resizing, normalization, data augmentation).",
-      "Model klasifikasi CNN sederhana berbasis TensorFlow/Keras.",
-      "Antarmuka CLI dan demonstrasi web prototype sederhana.",
-      "Output prediksi disertai skor tingkat kepercayaan (confidence score)."
-    ],
-    techStack: ["Python", "TensorFlow", "OpenCV", "NumPy", "Flask"],
-    role: "AI Explorer & Developer",
-    challenges: "Dataset citra daun yang terbatas dan memiliki variasi pencahayaan yang sangat berbeda.",
-    technicalSolution: "Menerapkan teknik Data Augmentation (rotation, zoom, horizontal flip) untuk memperkaya variasi sampel latih.",
-    result: "Model mencapai akurasi pengujian di atas 85% pada dataset skala eksperimental.",
-    gallery: [
-      { title: "Visualisasi Data Class & Prediction", type: "ai", subtitle: "Grafik akurasi dan antarmuka hasil deteksi" }
-    ],
-    githubUrl: "https://github.com/ikhsansalsabilly/crop-disease-ai-exploration",
-    demoUrl: ""
-  },
-  {
-    id: "personal-portfolio-v1",
-    slug: "personal-portfolio-v1",
+    id: "personal portfolio",
+    slug: "personal portfolio",
     title: "Interactive Personal Portfolio Website",
     category: "Personal",
     secondaryCategories: ["Web"],
     featured: false,
-    thumbnail: "/images/projects/portfolio.svg",
+    thumbnail: "/images/projects/portfolio.png",
     shortDescription: "Website portofolio pribadi modern berbasis React, Vite, dan Tailwind CSS dengan tema visual natural dan bersih.",
     overview: "Website ini dirancang sebagai wadah profesional untuk menampilkan karya proyek, keahlian teknis, riwayat pengalaman, dan prestasi akademik Ikhsan Salsabilly.",
     problem: "Membutuhkan media personal branding yang cepat, accessible, responsif, dan mudah diperbarui tanpa dependensi backend yang rumit.",
@@ -138,7 +109,7 @@ export const projectsData = [
     gallery: [
       { title: "Tampilan Utama & Portfolio Showcase", type: "web", subtitle: "Interface clean & natural palette" }
     ],
-    githubUrl: "https://github.com/ikhsansalsabilly/portfolio",
-    demoUrl: "https://ikhsansalsabilly.dev"
+    githubUrl: "#",
+    demoUrl: "#"
   }
 ];
