@@ -66,7 +66,7 @@ export const projectsData = [
   {
     id: "lost and found",
     slug: "lost and found",
-    title: "Sistem Informasi Lost and FOund",
+    title: "Sistem Informasi Lost and Found",
     category: "Web",
     secondaryCategories: ["Database", "Akademik"],
     featured: true,
@@ -106,6 +106,32 @@ export const projectsData = [
     challenges: "Memastikan skema warna konsisten di seluruh komponen sesuai guideline tanpa terlihat seperti template bawaan.",
     technicalSolution: "Mengkonfigurasi custom theme tokens di Tailwind config dan variabel CSS terpusat.",
     result: "Website memuat sangat cepat (skor Lighthouse tinggi) dan ramah perangkat mobile.",
+    gallery: [
+      { title: "Tampilan Utama & Portfolio Showcase", type: "web", subtitle: "Interface clean & natural palette" }
+    ],
+    githubUrl: "#",
+    demoUrl: "#"
+  },
+  {
+    id: "kontrol anggaran",
+    slug: "kontrol anggaran",
+    title: "Sistem Informasi Kontrol Anggaran",
+    category: "Akademik",
+    secondaryCategories: ["Web, Database"],
+    featured: false,
+    thumbnail: "/images/projects/kontrol_anggaran.png",
+    shortDescription: "",
+    overview: "",
+    problem: "",
+    solution: "",
+    features: [
+      ""
+    ],
+    techStack: ["Balde", "Laravel 12", "Tailwind CSS"],
+    role: "Fullstack Developer",
+    challenges: "",
+    technicalSolution: "",
+    result: "",
     gallery: [
       { title: "Tampilan Utama & Portfolio Showcase", type: "web", subtitle: "Interface clean & natural palette" }
     ],
